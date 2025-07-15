@@ -1,11 +1,17 @@
 from typing import Any
-from mcp.server import FastMCP
-import httpx 
+import httpx
+from mcp.server.fastmcp import FastMCP
 
+# Initialize FastMCP server
 mcp = FastMCP("weather")
 
+# Constants
 NWS_API_BASE = "https://api.weather.gov"
 USER_AGENT = "weather-app/1.0"
+
+#The FastMCP class uses Python type hints and docstrings to automatically generate tool definitions, making it easy to create and maintain MCP tools.
+
+#Helper functions to process data from the API response
 
 async def make_nws_request(url: str) -> dict[str, Any] | None:
     """Make a request to the NWS API with proper error handling."""
@@ -44,7 +50,7 @@ async def get_alerts(state: str) -> str:
         state: Two letter code for each state in US ( eg CA, NY)
     """
     url = f"{NWS_API_BASE}/alerts/active/area/{state}"
-    data = await make_nws_request
+    data = await make_nws_request(url=url)
          
     if not data or "features" not in data:
         return "Unable to fetch alerts or no alerts found."

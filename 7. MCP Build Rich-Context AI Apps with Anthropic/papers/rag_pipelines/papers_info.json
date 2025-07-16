@@ -1,0 +1,68 @@
+{
+  "2506.09542v1": {
+    "title": "KG-Infused RAG: Augmenting Corpus-Based RAG with External Knowledge Graphs",
+    "authors": [
+      "Dingjun Wu",
+      "Yukun Yan",
+      "Zhenghao Liu",
+      "Zhiyuan Liu",
+      "Maosong Sun"
+    ],
+    "summary": "Retrieval-Augmented Generation (RAG) improves factual accuracy by grounding\nresponses in external knowledge. However, existing methods typically rely on a\nsingle source, either unstructured text or structured knowledge. Moreover, they\nlack cognitively inspired mechanisms for activating relevant knowledge. To\naddress these issues, we propose KG-Infused RAG, a framework that integrates\nKGs into RAG systems to implement spreading activation, a cognitive process\nthat enables concept association and inference. KG-Infused RAG retrieves KG\nfacts, expands the query accordingly, and enhances generation by combining\ncorpus passages with structured facts, enabling interpretable, multi-source\nretrieval grounded in semantic structure. We further improve KG-Infused RAG via\npreference learning on sampled key stages in the pipeline. Experiments on five\nQA benchmarks show that KG-Infused RAG consistently outperforms vanilla RAG (by\n3.8% to 13.8%). Additionally, when integrated into Self-RAG, KG-Infused RAG\nbrings further performance gains, demonstrating its effectiveness and\nversatility as a plug-and-play enhancement module for corpus-based RAG methods.",
+    "pdf_url": "http://arxiv.org/pdf/2506.09542v1",
+    "published": "2025-06-11"
+  },
+  "2501.15228v1": {
+    "title": "Improving Retrieval-Augmented Generation through Multi-Agent Reinforcement Learning",
+    "authors": [
+      "Yiqun Chen",
+      "Lingyong Yan",
+      "Weiwei Sun",
+      "Xinyu Ma",
+      "Yi Zhang",
+      "Shuaiqiang Wang",
+      "Dawei Yin",
+      "Yiming Yang",
+      "Jiaxin Mao"
+    ],
+    "summary": "Retrieval-augmented generation (RAG) is extensively utilized to incorporate\nexternal, current knowledge into large language models, thereby minimizing\nhallucinations. A standard RAG pipeline may comprise several components, such\nas query rewriting, document retrieval, document filtering, and answer\ngeneration. However, these components are typically optimized separately\nthrough supervised fine-tuning, which can lead to misalignments between the\nobjectives of individual modules and the overarching aim of generating accurate\nanswers in question-answering (QA) tasks. Although recent efforts have explored\nreinforcement learning (RL) to optimize specific RAG components, these\napproaches often focus on overly simplistic pipelines with only two components\nor do not adequately address the complex interdependencies and collaborative\ninteractions among the modules. To overcome these challenges, we propose\ntreating the RAG pipeline as a multi-agent cooperative task, with each\ncomponent regarded as an RL agent. Specifically, we present MMOA-RAG, a\nMulti-Module joint Optimization Algorithm for RAG, which employs multi-agent\nreinforcement learning to harmonize all agents' goals towards a unified reward,\nsuch as the F1 score of the final answer. Experiments conducted on various QA\ndatasets demonstrate that MMOA-RAG improves the overall pipeline performance\nand outperforms existing baselines. Furthermore, comprehensive ablation studies\nvalidate the contributions of individual components and the adaptability of\nMMOA-RAG across different RAG components and datasets. The code of MMOA-RAG is\non https://github.com/chenyiqun/MMOA-RAG.",
+    "pdf_url": "http://arxiv.org/pdf/2501.15228v1",
+    "published": "2025-01-25"
+  },
+  "2504.13587v1": {
+    "title": "RAG Without the Lag: Interactive Debugging for Retrieval-Augmented Generation Pipelines",
+    "authors": [
+      "Quentin Romero Lauro",
+      "Shreya Shankar",
+      "Sepanta Zeighami",
+      "Aditya Parameswaran"
+    ],
+    "summary": "Retrieval-augmented generation (RAG) pipelines have become the de-facto\napproach for building AI assistants with access to external, domain-specific\nknowledge. Given a user query, RAG pipelines typically first retrieve (R)\nrelevant information from external sources, before invoking a Large Language\nModel (LLM), augmented (A) with this information, to generate (G) responses.\nModern RAG pipelines frequently chain multiple retrieval and generation\ncomponents, in any order. However, developing effective RAG pipelines is\nchallenging because retrieval and generation components are intertwined, making\nit hard to identify which component(s) cause errors in the eventual output. The\nparameters with the greatest impact on output quality often require hours of\npre-processing after each change, creating prohibitively slow feedback cycles.\nTo address these challenges, we present RAGGY, a developer tool that combines a\nPython library of composable RAG primitives with an interactive interface for\nreal-time debugging. We contribute the design and implementation of RAGGY,\ninsights into expert debugging patterns through a qualitative study with 12\nengineers, and design implications for future RAG tools that better align with\ndevelopers' natural workflows.",
+    "pdf_url": "http://arxiv.org/pdf/2504.13587v1",
+    "published": "2025-04-18"
+  },
+  "2409.19019v1": {
+    "title": "RAGProbe: An Automated Approach for Evaluating RAG Applications",
+    "authors": [
+      "Shangeetha Sivasothy",
+      "Scott Barnett",
+      "Stefanus Kurniawan",
+      "Zafaryab Rasool",
+      "Rajesh Vasa"
+    ],
+    "summary": "Retrieval Augmented Generation (RAG) is increasingly being used when building\nGenerative AI applications. Evaluating these applications and RAG pipelines is\nmostly done manually, via a trial and error process. Automating evaluation of\nRAG pipelines requires overcoming challenges such as context misunderstanding,\nwrong format, incorrect specificity, and missing content. Prior works therefore\nfocused on improving evaluation metrics as well as enhancing components within\nthe pipeline using available question and answer datasets. However, they have\nnot focused on 1) providing a schema for capturing different types of\nquestion-answer pairs or 2) creating a set of templates for generating\nquestion-answer pairs that can support automation of RAG pipeline evaluation.\nIn this paper, we present a technique for generating variations in\nquestion-answer pairs to trigger failures in RAG pipelines. We validate 5\nopen-source RAG pipelines using 3 datasets. Our approach revealed the highest\nfailure rates when prompts combine multiple questions: 91% for questions when\nspanning multiple documents and 78% for questions from a single document;\nindicating a need for developers to prioritise handling these combined\nquestions. 60% failure rate was observed in academic domain dataset and 53% and\n62% failure rates were observed in open-domain datasets. Our automated approach\noutperforms the existing state-of-the-art methods, by increasing the failure\nrate by 51% on average per dataset. Our work presents an automated approach for\ncontinuously monitoring the health of RAG pipelines, which can be integrated\ninto existing CI/CD pipelines, allowing for improved quality.",
+    "pdf_url": "http://arxiv.org/pdf/2409.19019v1",
+    "published": "2024-09-24"
+  },
+  "2506.08364v2": {
+    "title": "CC-RAG: Structured Multi-Hop Reasoning via Theme-Based Causal Graphs",
+    "authors": [
+      "Jash Rajesh Parekh",
+      "Pengcheng Jiang",
+      "Jiawei Han"
+    ],
+    "summary": "Understanding cause and effect relationships remains a formidable challenge\nfor Large Language Models (LLMs), particularly in specialized domains where\nreasoning requires more than surface-level correlations. Retrieval-Augmented\nGeneration (RAG) improves factual accuracy, but standard RAG pipelines treat\nevidence as flat context, lacking the structure required to model true causal\ndependencies. We introduce Causal-Chain RAG (CC-RAG), a novel approach that\nintegrates zero-shot triple extraction and theme-aware graph chaining into the\nRAG pipeline, enabling structured multi-hop inference. Given a domain specific\ncorpus, CC-RAG constructs a Directed Acyclic Graph (DAG) of <cause, relation,\neffect> triples and uses forward/backward chaining to guide structured answer\ngeneration. Experiments on two real-world domains: Bitcoin price fluctuations\nand Gaucher disease, show that CC-RAG outperforms standard RAG and zero-shot\nLLMs in chain similarity, information density, and lexical diversity. Both\nLLM-as-a-Judge and human evaluations consistently favor CC-RAG. Our results\ndemonstrate that explicitly modeling causal structure enables LLMs to generate\nmore accurate and interpretable responses, especially in specialized domains\nwhere flat retrieval fails.",
+    "pdf_url": "http://arxiv.org/pdf/2506.08364v2",
+    "published": "2025-06-10"
+  }
+}

@@ -1,6 +1,6 @@
 # deeplearning.ai
 
-Short courses from DeepLearning.AI on Generative AI, tools, and practical skills.
+A learning repository with code from the DeepLearning.AI short courses series, organized by AI concept or framework.
 
 Links
 - Repository: https://github.com/kailas711/deeplearning.ai
